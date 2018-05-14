@@ -1,0 +1,35 @@
+.card {
+    padding: 40px;
+
+    &:nth-of-type(2n) {
+        background-color: #eee;
+    }
+}
+
+.card__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media (min-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'left right';
+      grid-column-gap: 40px;
+
+      > * {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+      }
+    }
+}
+
+.card__item {
+  grid-column-start: auto;
+  grid-column-end: auto;
+  margin: .75em 0;
+
+  img,
+  .video {
+    width: 100%;
+  }
+}
