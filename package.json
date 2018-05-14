@@ -1,0 +1,47 @@
+{
+  "name": "puhc.co.uk",
+  "version": "1.0.0",
+  "description": "puhc.co.uk",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp clean && gulp copy && gulp build",
+    "dev": "npm run build && gulp watch",
+    "deploy": "npm run build && cp src/index.html dist && echo 'puhc.co.uk' > dist/CNAME &&  gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymantell/puhc.co.uk.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andymantell/puhc.co.uk/issues"
+  },
+  "homepage": "https://github.com/andymantell/puhc.co.uk#readme",
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gh-pages": "^1.1.0",
+    "semver": "^5.5.0",
+    "gulp": "^4.0.0",
+    "autoprefixer": "^8.4.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.19.1",
+    "event-stream": "^3.3.4",
+    "glob": "https://registry.npmjs.org/glob/-/glob-7.1.1.tgz",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-standard": "^11.0.0",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3"
+  }
+}
